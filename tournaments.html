@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments - HackSphere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">HackSphere</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hackathons.html">Hackathons</a></li>
+                <li><a href="tournaments.html" class="active">Tournaments</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="theme-toggle" class="btn theme-btn">Light Mode</button>
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="login.html" class="btn signup-btn">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="tournaments">
+        <h2>Inter-College Tournaments</h2>
+        <div class="trophy-case">
+            <h3>Virtual Trophy Case</h3>
+            <div class="trophy-grid">
+                <div class="trophy-card" data-tilt>Trophy: National Coding League 2024</div>
+                <div class="trophy-card" data-tilt>Trophy: Smart Cities Challenge 2023</div>
+            </div>
+        </div>
+        <div class="tournament-grid">
+            <div class="tournament-card" data-tilt>
+                <h3>National Coding League</h3>
+                <p>Compete with top colleges nationwide.</p>
+                <button class="btn card-btn" onclick="openTournamentModal('National Coding League')">Join</button>
+            </div>
+            <div class="tournament-card" data-tilt>
+                <h3>Smart Cities Challenge</h3>
+                <p>Design tech for urban innovation.</p>
+                <button class="btn card-btn" onclick="openTournamentModal('Smart Cities Challenge')">Join</button>
+            </div>
+        </div>
+        <div class="leaderboard">
+            <h3>College Leaderboard</h3>
+            <ul id="leaderboard"></ul>
+        </div>
+    </section>
+
+    <div id="tournament-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeTournamentModal()">×</span>
+            <h3>Join Tournament</h3>
+            <form id="tournament-form">
+                <p id="tournament-name"></p>
+                <input type="text" id="tournament-team" placeholder="Team Name" required>
+                <button type="submit" class="btn">Join Tournament</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>HackSphere</h3>
+                <p>Empowering innovation through collaboration.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="hackathons.html">Hackathons</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>Email: support@hacksphere.com</p>
+            </div>
+        </div>
+        <p>© 2025 HackSphere. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

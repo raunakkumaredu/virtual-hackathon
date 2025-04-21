@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - HackSphere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">HackSphere</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hackathons.html">Hackathons</a></li>
+                <li><a href="tournaments.html">Tournaments</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="theme-toggle" class="btn theme-btn">Light Mode</button>
+                <a href="index.html" class="btn logout-btn">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="profile">
+        <h2>Your Profile</h2>
+        <div class="profile-container">
+            <div class="profile-card" data-tilt>
+                <h3 id="profile-name-display">John Doe</h3>
+                <p id="profile-email-display">raunak.ds@saitm.com</p>
+                <p id="profile-skills-display">JavaScript, Python, UI/UX</p>
+                <button class="btn" onclick="openEditProfileModal()">Edit Profile</button>
+            </div>
+            <div class="profile-card" data-tilt>
+                <h3>Achievements</h3>
+                <ul id="achievements">
+                    <li>1st Place - AI Innovation Challenge</li>
+                    <li>Top 10 - Green Tech Hackathon</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div id="edit-profile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeEditProfileModal()">×</span>
+            <h3>Edit Profile</h3>
+            <form id="edit-profile-form">
+                <input type="text" id="profile-name" placeholder="Full Name" value="John Doe" required>
+                <input type="email" id="profile-email" placeholder="Email" value="john.doe@example.com" required>
+                <input type="text" id="profile-skills" placeholder="Skills" value="JavaScript, Python, UI/UX" required>
+                <button type="submit" class="btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>HackSphere</h3>
+                <p>Empowering innovation through collaboration.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="hackathons.html">Hackathons</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>Email: support@hacksphere.com</p>
+            </div>
+        </div>
+        <p>© 2025 HackSphere. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

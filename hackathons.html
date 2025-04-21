@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathons - HackSphere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">HackSphere</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="hackathons.html" class="active">Hackathons</a></li>
+                <li><a href="tournaments.html">Tournaments</a></li>
+                <li><a href="industry.html">Industry</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn login-btn">Login</a>
+                <a href="login.html" class="btn signup-btn">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hackathons">
+        <h2>Explore Hackathons</h2>
+        <div class="filter-bar">
+            <input type="text" id="search-hackathons" placeholder="Search hackathons...">
+            <select id="theme-filter">
+                <option value="">All Themes</option>
+                <option value="ai">AI</option>
+                <option value="web">Web Dev</option>
+                <option value="green">Green Tech</option>
+            </select>
+        </div>
+        <div class="hackathon-grid">
+            <div class="hackathon-card" data-tilt>
+                <h3>AI Innovation Challenge</h3>
+                <p>Build AI solutions for global issues.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%;"></div>
+                </div>
+                <p>75% slots filled</p>
+                <button class="btn card-btn" onclick="registerHackathon('AI Innovation Challenge')">Join</button>
+            </div>
+            <div class="hackathon-card" data-tilt>
+                <h3>Green Tech Hackathon</h3>
+                <p>Create sustainable tech solutions.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+                <p>50% slots filled</p>
+                <button class="btn card-btn" onclick="registerHackathon('Green Tech Hackathon')">Join</button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>HackSphere</h3>
+                <p>Building the future of innovation.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="hackathons.html">Hackathons</a></li>
+                    <li><a href="tournaments.html">Tournaments</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>Email: support@hacksphere.com</p>
+                <p>Join our community!</p>
+            </div>
+        </div>
+        <p>© 2025 HackSphere. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+    <div id="hackathon-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <h3>Register for Hackathon</h3>
+            <p id="hackathon-name"></p>
+            <button class="btn" onclick="confirmRegistration()">Confirm Registration</button>
+        </div>
+    </div>
+</body>
+</html>
